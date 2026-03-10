@@ -87,8 +87,7 @@ int main(){
         case 'P': //커서가 가리키는 위치에 받은 문자를 삽입>>가 아니고 커서 왼쪽입니다..
             char add;
             cin >> add;
-            edt.insert(t, add);
-            t++;
+            edt.insert(t, add);//insert메소드는 iterater가 가리키는 값의 왼쪽에 새로운 값을 삽입한다. 이때 iterator는 원래 가리키고 있던 놈을 계속 가리킨다.
             
             break;
         
