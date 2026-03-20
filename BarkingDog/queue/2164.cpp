@@ -47,6 +47,7 @@ int main(){
         q.push(i);
     }
 
+    //이 방법이 n에 2를 빼고 while문에 넣는 것보다 더 직관적이고 실수의 위험성이 적은 방법이다.
     while(q.size() > 1){//c11++이후로 모든 STL 자료구조의 size()메소드는 O(1)이라 보면된다.
         q.pop();
         q.push(q.front());

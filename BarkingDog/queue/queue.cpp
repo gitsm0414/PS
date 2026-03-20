@@ -54,6 +54,7 @@ int front(){
 
 int back(){
     //return (tail == 0 ? dat[MAX-1] : dat[tail-1]);
+    //위와같은 방식이 % 연산자보다는 속도가 더 빠르긴 하다. 위 방법도 좋은 방법.
     //다음과 같이 단순화 가능
     return dat[(tail - 1 + MAX) % MAX]; //tail - 1이 음수가 되는 것을 막기 위해 + MAX를 함으로 써 한바퀴 더 돌려준다.
 }
