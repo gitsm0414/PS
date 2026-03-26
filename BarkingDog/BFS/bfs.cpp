@@ -66,19 +66,24 @@ int main(){
     //print board
     for(int i = 0; i < MAX; i++){
         for(int j = 0; j < MAX; j++){
-            cout << board[i][j] << '\t';
+            if(board[i][j] == -1) cout << board[i][j] << '\t';
+            else cout << " \t";
         }
         cout << "\n\n";
     }
+    for(int i = 0; i < MAX; i++){
+        cout << "________";
+    }
+    cout << "\n\n";
 
     //print vis[][] it should be all '1's except for walls
     for(int i = 0; i < MAX; i++){
         for(int j = 0; j < MAX; j++){
-            cout << vis[i][j] << '\t';
+            if(vis[i][j]) cout << vis[i][j] << '\t';
+            else cout << " \t";
         }
         cout << "\n\n";
     }
-
 
     return 0;
 }
